@@ -6,7 +6,7 @@ with open('key.txt', 'r') as myfile:
 token = 'gAAAAABboJLxyuPbAIa6Nj6k-HXj_2MXHsParKmj3o24xzIBKwzoQ5SiNUr0ftawcfA0kklvX9j6Sceh3JoQMFUTKJEnhtnoFQ=='
 f = Fernet(key)
 
-msf = MySportsFeeds(version="1.2")
+msf = MySportsFeeds(version="1.0")
 
-msf.authenticate("836f3af8-933a-49ed-a37b-fbe37b", f.decrypt(key))
-output = msf.msf_get_data(league='nfl',season='2015-2016-regular',feed='cumulative_player_stats',format='xml',team='dallas-cowboys')
+msf.authenticate("836f3af8-933a-49ed-a37b-fbe37b", f.decrypt(token))
+output = msf.msf_get_data(league='nba',season='2016-2017-regular',feed='player_gamelogs',format='json',player='stephen-curry')

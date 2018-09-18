@@ -1,10 +1,10 @@
 require "mysportsfeeds"
 require_relative 'StringFind.rb'
 
-PATH = '/Users/donald/Google Drive/Football Model'
+PATH = '/Users/donald/Projects/Football-Model'
 
 msf = MySportsFeeds.new(version="1.0", true)
-pwd = "8FAA0016D0D3EA6D4C70ED24A07C8B64"
+pwd = "2F6F490793BE248DE3B200CF16C545A0"
 key = File.read("#{PATH}/key.txt")
 
 msf.authenticate("donballz", pwd.decrypt(key))
