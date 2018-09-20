@@ -2,12 +2,8 @@ from ohmysportsfeedspy import MySportsFeeds
 from cryptography.fernet import Fernet
 import json
 
-with open('key.txt', 'r') as myfile:
-  key = myfile.read()
-token = 'gAAAAABboJLxyuPbAIa6Nj6k-HXj_2MXHsParKmj3o24xzIBKwzoQ5SiNUr0ftawcfA0kklvX9j6Sceh3JoQMFUTKJEnhtnoFQ=='
-f = Fernet(key)
+msf = MySportsFeeds(version="2.0", store_type='file', store_location='results/')
 
-msf = MySportsFeeds(version="1.1", store_type=None)
-
-msf.authenticate("<76991493-077a-4a0f-92da-874b8c>", "<#{f.decrypt(token)}>")
-output = msf.msf_get_data(league='nfl',season='2015-2016-regular',feed='cumulative_player_stats',format='json',team='dallas-cowboys')
+msf.authenticate("76991493-077a-4a0f-92da-874b8c", "MYSPORTSFEEDS")
+output = msf.msf_get_data(league='mlb',season='2016-playoff',feed='seasonal_games',format='json')
+print output
