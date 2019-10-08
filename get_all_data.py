@@ -14,7 +14,7 @@ msf.authenticate(f.decrypt(token), "MYSPORTSFEEDS")
 #print output
 league = 'nfl'
 beg_yr = 2014
-end_yr = 2018
+end_yr = 2019
 rec_plyff = False
 valid_feeds = [
             'seasonal_games',

@@ -10,5 +10,5 @@ token = 'gAAAAABboxejr3hkCDwGeNSEQDPjLbw2T-M41JclD-7ZqqhZWAM61cjqybisLMBFdARpk4L
 msf = MySportsFeeds(version="2.0", store_type='file', store_location='results/')
 
 msf.authenticate(f.decrypt(token), "MYSPORTSFEEDS")
-output = msf.msf_get_data(league='nba',season='2016-playoff',feed='seasonal_games',format='json')
+output = msf.msf_get_data(league='nfl',season='2016-playoff',feed='seasonal_games',format='json')
 print output
